@@ -6,7 +6,7 @@ on:
   - cron: "0 2 1 */2 *"
   push:
     branches:
-      - main
+      - master
     paths:
       - worker/**
       - .github/workflows/deploy-worker.yml
