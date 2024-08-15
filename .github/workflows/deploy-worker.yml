@@ -24,13 +24,13 @@ jobs:
       - name: Set Up Node.js
         uses: actions/setup-node@v3
         with:
-          node-version: 16
+          node-version: 18
       - run: npm install
       - name: Add mask
         run: |
           echo "::add-mask::${{ secrets.MASK_WORKER_URL }}"
       - name: Publish to Cloudflare Workers
-        uses: cloudflare/wrangler-action@2.0.0
+        uses: cloudflare/wrangler-action@3.7.0
         with:
           apiToken: ${{ secrets.CF_API_TOKEN }}
           workingDirectory: "worker"
