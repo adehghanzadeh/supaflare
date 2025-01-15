@@ -310,7 +310,7 @@ export default defineComponent({
 				title: 'Slug',
 				key: 'slug',
 				render(row: any) {
-					return h('b', {}, { default: () => '/' + row.slug });
+					return h('b', {}, { default: () => 'https://takt.ir/' + row.slug });
 				},
 			},
 			{
